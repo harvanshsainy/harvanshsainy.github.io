@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harvansh Sainy — Senior Full Stack Developer (Node.js, React, Angular)</title>
+<meta name="description" content="Harvansh Sainy is a Senior Full Stack Developer with 8+ years building scalable web apps and REST APIs using Node.js, React, Angular, MongoDB, AWS and Docker. Based in Lucknow, India.">
+<meta name="keywords" content="Harvansh Sainy, Full Stack Developer, Node.js Developer, React Developer, Angular Developer, MongoDB, AWS, Docker, Lucknow, Software Engineer">
+<meta name="author" content="Harvansh Sainy">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://harvanshsainy.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Harvansh Sainy — Senior Full Stack Developer">
+<meta property="og:description" content="8+ years building scalable web applications and REST APIs with Node.js, React, Angular, MongoDB, AWS and Docker.">
+<meta property="og:url" content="https://harvanshsainy.github.io/">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/43061641?v=4">
+<meta property="og:site_name" content="Harvansh Sainy">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Harvansh Sainy — Senior Full Stack Developer">
+<meta name="twitter:description" content="8+ years building scalable web applications and REST APIs with Node.js, React, Angular, MongoDB, AWS and Docker.">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/43061641?v=4">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%230E1A2B%22/><path d=%22M28 70 V30 M28 30 H60 A12 12 0 0 1 60 54 H28 M45 54 L70 70%22 stroke=%22%238FD3FF%22 stroke-width=%228%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Harvansh Sainy",
+  "url": "https://harvanshsainy.github.io/",
+  "image": "https://avatars.githubusercontent.com/u/43061641?v=4",
+  "jobTitle": "Senior Full Stack Developer",
+  "description": "Senior Full Stack Developer with 8+ years of experience building scalable web applications, REST APIs, and enterprise solutions.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lucknow",
+    "addressCountry": "IN"
+  },
+  "email": "mailto:harvanshsainy265@gmail.com",
+  "sameAs": [
+    "https://github.com/harvanshsainy",
+    "https://www.linkedin.com/in/harvansh-sainy/"
+  ],
+  "knowsAbout": ["Node.js", "Express.js", "React", "Angular", "TypeScript", "MongoDB", "MySQL", "AWS", "Docker", "REST API Design", "System Design"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #0E1A2B;
+    --bg-line: #1B2E47;
+    --panel: #122036;
+    --ink: #EAF2FB;
+    --ink-muted: #7C93AD;
+    --cyan: #8FD3FF;
+    --copper: #E8A33D;
+    --font-display: "Space Grotesk", "IBM Plex Sans", sans-serif;
+    --font-body: "IBM Plex Sans", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:
+      linear-gradient(var(--bg-line) 1px, transparent 1px) 0 0/40px 40px,
+      linear-gradient(90deg, var(--bg-line) 1px, transparent 1px) 0 0/40px 40px,
+      var(--bg);
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+
+  .wrap{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* Blueprint sheet styling used on every section */
+  .sheet{
+    position: relative;
+    border: 1px solid var(--bg-line);
+    background: rgba(18,32,54,0.55);
+    padding: 56px 40px;
+    margin: 0 0 40px 0;
+  }
+  .sheet::before, .sheet::after,
+  .sheet .tick-tl, .sheet .tick-br{
+    content:"";
+    position:absolute;
+    width:16px; height:16px;
+    border: 1.5px solid var(--cyan);
+    opacity:.55;
+  }
+  .sheet::before{ top:-1px; left:-1px; border-right:none; border-bottom:none; }
+  .sheet::after{ bottom:-1px; right:-1px; border-left:none; border-top:none; }
+
+  .coord{
+    position:absolute;
+    top:12px; right:20px;
+    font-family: var(--font-mono);
+    font-size:11px;
+    letter-spacing:.08em;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+
+  header.top{
+    position: sticky; top:0; z-index:50;
+    backdrop-filter: blur(10px);
+    background: rgba(14,26,43,0.85);
+    border-bottom: 1px solid var(--bg-line);
+  }
+  header.top .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:18px; padding-bottom:18px;
+  }
+  .brand{
+    font-family: var(--font-mono);
+    font-size: 15px;
+    letter-spacing: .04em;
+    display:flex; align-items:center; gap:10px;
+  }
+  .brand .dot{width:8px;height:8px;background:var(--copper);border-radius:50%; box-shadow:0 0 8px var(--copper);}
+  nav.top-nav{display:flex; gap:28px; font-family: var(--font-mono); font-size:13px;}
+  nav.top-nav a{color:var(--ink-muted); text-decoration:none; transition:color .2s;}
+  nav.top-nav a:hover{color:var(--cyan);}
+
+  /* HERO */
+  .hero{
+    padding: 90px 0 40px;
+  }
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--copper);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:"//"; color:var(--ink-muted);}
+
+  h1{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2.4rem, 5.6vw, 4.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
+  }
+  h1 span{color:var(--cyan);}
+
+  .lede{
+    max-width: 620px;
+    color: var(--ink-muted);
+    font-size: 1.08rem;
+    margin-bottom: 34px;
+  }
+
+  .hero-meta{
+    display:flex; flex-wrap:wrap; gap:14px 28px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--ink-muted);
+    margin-bottom: 40px;
+  }
+  .hero-meta strong{color:var(--ink); font-weight:500;}
+
+  .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    font-family: var(--font-mono);
+    font-size: 13.5px;
+    padding: 13px 24px;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    text-decoration:none;
+    letter-spacing:.02em;
+    transition: all .2s;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn:hover{background:var(--cyan); color:var(--bg);}
+  .btn.solid{background:var(--copper); border-color:var(--copper); color:#1a1206;}
+  .btn.solid:hover{background:transparent; color:var(--copper);}
+
+  /* Architecture diagram */
+  .diagram-wrap{margin-top:56px;}
+  .diagram-wrap svg{width:100%; height:auto;}
+  .diagram-caption{
+    font-family: var(--font-mono); font-size:12px; color:var(--ink-muted);
+    margin-top:14px; text-align:center; letter-spacing:.04em;
+  }
+
+  /* Section headings */
+  .section-head{
+    display:flex; align-items:baseline; gap:16px;
+    margin-bottom: 36px;
+  }
+  .section-head .num{
+    font-family: var(--font-mono); color:var(--copper); font-size:14px;
+  }
+  h2{
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight:600;
+  }
+  .section-head::after{
+    content:"";
+    flex:1; height:1px; background: var(--bg-line);
+  }
+
+  /* Stack grid */
+  .stack-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+  }
+  .stack-card h3{
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--copper);
+    margin-bottom: 14px;
+    padding-bottom:10px;
+    border-bottom: 1px dashed var(--bg-line);
+  }
+  .stack-card ul{list-style:none;}
+  .stack-card li{
+    font-size: .96rem;
+    color: var(--ink);
+    padding: 5px 0;
+    position:relative; padding-left:18px;
+  }
+  .stack-card li::before{
+    content:"—"; position:absolute; left:0; color:var(--ink-muted);
+  }
+
+  /* What I do */
+  .capability-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px;}
+  .capability{
+    border-left: 2px solid var(--bg-line);
+    padding: 4px 0 4px 18px;
+    font-size:.98rem;
+    transition: border-color .2s;
+  }
+  .capability:hover{border-color:var(--cyan);}
+
+  /* Experience */
+  .exp-block{display:grid; grid-template-columns: 200px 1fr; gap:36px;}
+  .exp-side{font-family:var(--font-mono); font-size:13px; color:var(--ink-muted);}
+  .exp-side .role{color:var(--cyan); font-size:1rem; margin-bottom:6px; display:block;}
+  .exp-list{list-style:none;}
+  .exp-list li{position:relative; padding-left:22px; margin-bottom:12px; font-size:.98rem;}
+  .exp-list li::before{content:"▸"; position:absolute; left:0; color:var(--copper);}
+
+  /* Skills */
+  .skill-tags{display:flex; flex-wrap:wrap; gap:10px;}
+  .skill-tags span{
+    font-family: var(--font-mono); font-size:12.5px;
+    border:1px solid var(--bg-line);
+    padding:8px 14px;
+    color: var(--ink);
+  }
+
+  /* Project */
+  .project-card{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .project-title{
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight:600;
+    color: var(--cyan);
+    margin-bottom: 10px;
+  }
+  .project-tags{display:flex; flex-wrap:wrap; gap:8px; margin: 16px 0 20px;}
+  .project-tags span{
+    font-family:var(--font-mono); font-size:11.5px; color:var(--copper);
+    border:1px solid var(--copper); padding:4px 10px;
+  }
+  .project-link{
+    font-family:var(--font-mono); font-size:13px; color:var(--cyan);
+    text-decoration:none; border-bottom:1px solid var(--cyan); padding-bottom:2px;
+  }
+
+  /* Contact */
+  .contact-grid{
+    display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:24px;
+  }
+  .contact-item{
+    padding: 22px;
+    border:1px solid var(--bg-line);
+    text-decoration:none;
+    display:block;
+    transition: border-color .2s, transform .2s;
+  }
+  .contact-item:hover{border-color:var(--cyan); transform: translateY(-3px);}
+  .contact-item .label{
+    font-family:var(--font-mono); font-size:11px; color:var(--ink-muted);
+    text-transform:uppercase; letter-spacing:.1em; margin-bottom:8px; display:block;
+  }
+  .contact-item .value{font-size:1.02rem; color:var(--ink);}
+
+  footer{
+    padding: 40px 0 60px;
+    text-align:center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+
+  @media (max-width: 720px){
+    .sheet{padding: 40px 22px;}
+    .exp-block{grid-template-columns:1fr;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .flow-dash{animation:none !important;}
+  }
+
+  .flow-dash{
+    stroke-dasharray: 6 6;
+    animation: dashmove 2.2s linear infinite;
+  }
+  @keyframes dashmove{ to{ stroke-dashoffset:-24; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span>HARVANSH.SAINY</div>
+    <nav class="top-nav">
+      <a href="#stack">Stack</a>
+      <a href="#work">Experience</a>
+      <a href="#project">Project</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero" id="top">
+      <p class="eyebrow">Lucknow, India — Available for opportunities</p>
+      <h1>Harvansh Sainy<br>builds <span>full stack systems</span><br>that hold up in production.</h1>
+      <p class="lede">Senior Full Stack Developer with 8+ years designing scalable web applications, REST APIs, and enterprise solutions — from database schema to deployment pipeline.</p>
+      <div class="hero-meta">
+        <span><strong>8+ yrs</strong> professional experience</span>
+        <span><strong>Node.js · React · Angular</strong> core stack</span>
+        <span><strong>MongoDB · MySQL</strong> · AWS · Docker</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn solid" href="mailto:harvanshsainy265@gmail.com">Email me</a>
+        <a class="btn" href="https://github.com/harvanshsainy" target="_blank" rel="noopener">View GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/harvansh-sainy/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+
+      <div class="diagram-wrap" role="img" aria-label="Architecture diagram showing Harvansh Sainy at the center, connected to Frontend, Backend, Database, and DevOps and Cloud nodes">
+        <svg viewBox="0 0 960 320" xmlns="http://www.w3.org/2000/svg">
+          <!-- connectors -->
+          <g fill="none" stroke="#2A4058" stroke-width="1.5">
+            <path d="M480,160 L200,60"></path>
+            <path d="M480,160 L200,260"></path>
+            <path d="M480,160 L760,60"></path>
+            <path d="M480,160 L760,260"></path>
+          </g>
+          <g fill="none" stroke="#8FD3FF" stroke-width="1.5" class="flow-dash">
+            <path d="M480,160 L200,60"></path>
+            <path d="M480,160 L200,260"></path>
+            <path d="M480,160 L760,60"></path>
+            <path d="M480,160 L760,260"></path>
+          </g>
+
+          <!-- center node -->
+          <rect x="400" y="128" width="160" height="64" fill="#122036" stroke="#E8A33D" stroke-width="1.5"></rect>
+          <text x="480" y="155" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#E8A33D" letter-spacing="1">H. SAINY</text>
+          <text x="480" y="174" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#7C93AD">FULL STACK</text>
+
+          <!-- Frontend node -->
+          <rect x="120" y="30" width="160" height="60" fill="#0E1A2B" stroke="#1B2E47"></rect>
+          <text x="200" y="55" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8FD3FF">FRONTEND</text>
+          <text x="200" y="72" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#7C93AD">React · Angular · TS</text>
+
+          <!-- Backend node -->
+          <rect x="120" y="230" width="160" height="60" fill="#0E1A2B" stroke="#1B2E47"></rect>
+          <text x="200" y="255" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8FD3FF">BACKEND</text>
+          <text x="200" y="272" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#7C93AD">Node · Express · JWT</text>
+
+          <!-- DB node -->
+          <rect x="680" y="30" width="160" height="60" fill="#0E1A2B" stroke="#1B2E47"></rect>
+          <text x="760" y="55" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8FD3FF">DATABASE</text>
+          <text x="760" y="72" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#7C93AD">MongoDB · MySQL</text>
+
+          <!-- DevOps node -->
+          <rect x="680" y="230" width="160" height="60" fill="#0E1A2B" stroke="#1B2E47"></rect>
+          <text x="760" y="255" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#8FD3FF">DEVOPS / CLOUD</text>
+          <text x="760" y="272" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#7C93AD">AWS · Docker · Nginx</text>
+        </svg>
+        <p class="diagram-caption">System overview — how the stack connects around one engineer</p>
+      </div>
+    </section>
+
+    <section id="stack" class="sheet">
+      <span class="coord">SHEET 01 / STACK</span>
+      <div class="section-head"><span class="num">01</span><h2>Tech stack</h2></div>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js & Express.js</li>
+            <li>REST API design</li>
+            <li>JWT authentication</li>
+            <li>Redis · WebSockets</li>
+            <li>PHP (Laravel, CodeIgniter)</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3>Frontend</h3>
+          <ul>
+            <li>Angular (latest versions)</li>
+            <li>React.js</li>
+            <li>TypeScript · JavaScript (ES6+)</li>
+            <li>HTML5 · CSS3 · Bootstrap</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3>Database</h3>
+          <ul>
+            <li>MongoDB · Mongoose</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3>DevOps & Cloud</h3>
+          <ul>
+            <li>Docker · Nginx · PM2</li>
+            <li>Linux</li>
+            <li>AWS (EC2, S3)</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet">
+      <span class="coord">SHEET 02 / CAPABILITIES</span>
+      <div class="section-head"><span class="num">02</span><h2>What I do</h2></div>
+      <div class="capability-list">
+        <div class="capability">Build scalable full stack applications</div>
+        <div class="capability">Design RESTful APIs</div>
+        <div class="capability">Database design & optimization</div>
+        <div class="capability">Authentication & authorization</div>
+        <div class="capability">Performance optimization</div>
+        <div class="capability">Bug fixing & troubleshooting</div>
+        <div class="capability">Deployment & server management</div>
+        <div class="capability">Code review & mentoring junior developers</div>
+        <div class="capability">Agile / Scrum development</div>
+      </div>
+    </section>
+
+    <section id="work" class="sheet">
+      <span class="coord">SHEET 03 / EXPERIENCE</span>
+      <div class="section-head"><span class="num">03</span><h2>Experience</h2></div>
+      <div class="exp-block">
+        <div class="exp-side">
+          <span class="role">Senior Full Stack Developer</span>
+          8+ years professional experience
+        </div>
+        <ul class="exp-list">
+          <li>Developed enterprise web applications using Node.js, Angular, React, and MongoDB.</li>
+          <li>Designed scalable backend architectures and REST APIs.</li>
+          <li>Optimized database queries and application performance.</li>
+          <li>Integrated third-party APIs and payment gateways.</li>
+          <li>Led feature development from planning to production.</li>
+          <li>Mentored junior developers and reviewed code quality.</li>
+          <li>Worked closely with product managers, designers, and QA teams.</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:44px; padding-top:36px; border-top:1px dashed var(--bg-line);">
+        <h3 style="font-family:var(--font-mono); font-size:13px; text-transform:uppercase; letter-spacing:.1em; color:var(--copper); margin-bottom:18px;">Key skills</h3>
+        <div class="skill-tags">
+          <span>Full Stack Development</span>
+          <span>System Design</span>
+          <span>REST API Development</span>
+          <span>Authentication & Security</span>
+          <span>MongoDB & MySQL</span>
+          <span>Performance Optimization</span>
+          <span>Microservices</span>
+          <span>Responsive UI Development</span>
+          <span>Git Workflow</span>
+          <span>Agile Methodology</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="sheet">
+      <span class="coord">SHEET 04 / PROJECT</span>
+      <div class="section-head"><span class="num">04</span><h2>Featured project</h2></div>
+      <div class="project-card">
+        <div>
+          <div class="project-title">Real-Time Collaborative Notes</div>
+          <p class="lede" style="margin-bottom:0;">A full stack collaborative notes application with live multi-user editing, built on React and Node.js with Socket.IO handling real-time sync, JWT-based auth, and rate-limited, validated Express APIs backed by MongoDB.</p>
+          <div class="project-tags">
+            <span>React 18 + Vite</span>
+            <span>Node.js / Express</span>
+            <span>MongoDB + Mongoose</span>
+            <span>Socket.IO</span>
+            <span>JWT Auth</span>
+            <span>Tailwind CSS</span>
+          </div>
+          <a class="project-link" href="https://github.com/harvanshsainy/real-time-collaborative-notes" target="_blank" rel="noopener">View repository on GitHub →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="sheet">
+      <span class="coord">SHEET 05 / CONTACT</span>
+      <div class="section-head"><span class="num">05</span><h2>Get in touch</h2></div>
+      <p class="lede" style="margin-bottom:32px;">Open to senior full stack roles, freelance builds, and technical collaboration.</p>
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:harvanshsainy265@gmail.com">
+          <span class="label">Email</span>
+          <span class="value">harvanshsainy265@gmail.com</span>
+        </a>
+        <a class="contact-item" href="https://github.com/harvanshsainy" target="_blank" rel="noopener">
+          <span class="label">GitHub</span>
+          <span class="value">github.com/harvanshsainy</span>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/harvansh-sainy/" target="_blank" rel="noopener">
+          <span class="label">LinkedIn</span>
+          <span class="value">in/harvansh-sainy</span>
+        </a>
+        <a class="contact-item" href="#top">
+          <span class="label">Location</span>
+          <span class="value">Lucknow, India</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> Harvansh Sainy — Built with clean architecture and continuous learning.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
